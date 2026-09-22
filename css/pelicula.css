@@ -1,0 +1,273 @@
+/* ==================== PELÍCULA / ESPECIAL ==================== */
+
+.movie-page {
+  padding-top: 95px;
+  background: #111;
+  overflow: hidden;
+}
+
+.movie-hero {
+  min-height: 760px;
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  padding: 100px 10%;
+  position: relative;
+  background: #080808;
+}
+
+.movie-hero::before {
+  content: "";
+  position: absolute;
+  width: 65%;
+  height: 75%;
+  right: -30%;
+  top: 10%;
+  background: #e50914;
+  opacity: 0.85;
+  transform: rotate(-8deg);
+}
+
+.movie-poster {
+  position: relative;
+  width: 390px;
+  flex-shrink: 0;
+  z-index: 2;
+  transform: rotate(-4deg);
+}
+
+.movie-poster::before {
+  content: "";
+  position: absolute;
+  inset: -14px;
+  border: 4px solid white;
+  background: #e50914;
+  z-index: -1;
+  transform: rotate(7deg);
+}
+
+.movie-poster img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border: 5px solid white;
+  box-shadow: 14px 14px 0 #000;
+}
+
+.movie-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+}
+
+.movie-number {
+  display: inline-block;
+  padding: 5px 15px;
+  margin-bottom: 20px;
+  background: #e50914;
+  border: 2px solid white;
+  box-shadow: 5px 5px 0 white;
+  font-weight: 900;
+  font-size: 24px;
+  font-style: italic;
+  transform: skew(-10deg);
+}
+
+.movie-content h1 {
+  font-size: clamp(55px, 7vw, 95px);
+  line-height: .82;
+  font-style: italic;
+  margin-bottom: 30px;
+  transform: skew(-5deg);
+}
+
+.movie-content h1 span {
+  color: #e50914;
+  text-shadow: 4px 4px 0 white;
+}
+
+.movie-content > p {
+  max-width: 600px;
+  color: #ddd;
+  font-size: 19px;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.movie-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.movie-details div {
+  border-left: 5px solid #e50914;
+  padding-left: 15px;
+}
+
+.movie-divider {
+  width: 85%;
+  margin-left: 0;
+}
+
+.movie-info,
+.movie-cast {
+  padding: 100px 10%;
+}
+
+.movie-story {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 80px;
+  align-items: center;
+}
+
+.story-main p {
+  color: #ddd;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.movie-quote {
+  padding: 35px;
+  background: #e50914;
+  border: 4px solid white;
+  box-shadow: 12px 12px 0 #000;
+  transform: rotate(4deg);
+}
+
+.movie-quote span {
+  display: block;
+  font-size: 14px;
+  letter-spacing: 4px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.movie-quote strong {
+  display: block;
+  font-size: 43px;
+  line-height: .85;
+  font-style: italic;
+  text-shadow: 3px 3px 0 #000;
+}
+
+.movie-cast {
+  background: #0b0b0b;
+}
+
+.cast-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cast-item {
+  padding: 28px 20px;
+  background: #181818;
+  border: 2px solid white;
+  box-shadow: 7px 7px 0 #e50914;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: italic;
+  transform: skew(-5deg);
+  transition: .2s ease;
+}
+
+.cast-item:hover {
+  transform: skew(-5deg) translate(-4px,-4px);
+  box-shadow: 10px 10px 0 white;
+}
+
+.cast-item small {
+  display: block;
+  color: #aaa;
+  font-size: 11px;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.movie-banner {
+  min-height: 400px;
+  padding: 80px 10%;
+  display: flex;
+  align-items: center;
+  background: #e50914;
+  clip-path: polygon(0 12%, 100% 0, 100% 88%, 0 100%);
+}
+
+.movie-banner p {
+  font-weight: 900;
+  letter-spacing: 4px;
+}
+
+.movie-banner h2 {
+  font-size: clamp(45px, 7vw, 85px);
+  line-height: .88;
+  font-style: italic;
+  text-shadow: 5px 5px 0 #000;
+  margin-top: 15px;
+}
+
+@media (max-width: 900px) {
+  .movie-page { padding-top: 70px; }
+
+  .movie-hero {
+    flex-direction: column;
+    padding: 90px 7%;
+    text-align: center;
+    gap: 70px;
+  }
+
+  .movie-poster {
+    width: min(70%, 350px);
+  }
+
+  .movie-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .movie-details {
+    text-align: left;
+  }
+
+  .movie-story {
+    grid-template-columns: 1fr;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .movie-info,
+  .movie-cast {
+    padding: 70px 5%;
+  }
+
+  .movie-poster {
+    width: 85%;
+  }
+
+  .movie-content h1 {
+    font-size: 53px;
+  }
+
+  .movie-details,
+  .cast-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-quote {
+    max-width: 280px;
+    margin: auto;
+  }
+}

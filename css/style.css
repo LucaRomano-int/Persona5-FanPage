@@ -206,6 +206,164 @@ body {
   border-bottom: 4px solid #e50914;
   z-index: 100;
 }
+.nav-item-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* ==================== BOTÓN ANIME ==================== */
+
+.nav-item-dropdown .dropdown-toggle {
+    position: relative;
+    z-index: 12;
+}
+
+
+/* Animación original del botón */
+
+.nav-item-dropdown:hover .dropdown-toggle,
+.nav-item-dropdown.activo .dropdown-toggle {
+    background-color: #e50914;
+    border-color: #ffffff;
+    transform: skew(-10deg) translate(-3px, -3px);
+
+    /* La sombra lateral sigue existiendo,
+       pero no crea una separación debajo */
+    box-shadow: 6px 0 0 #ffffff;
+}
+
+
+/* ==================== SUBMENÚ ==================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    /*
+       Lo colocamos ligeramente por encima del punto
+       donde terminaría normalmente.
+       Esto hace que se "meta" debajo del botón.
+    */
+    top: calc(100% - 10px);
+    left: -6px;
+
+    width: 100%;
+
+    background-color: #080808;
+
+    /*
+       El borde superior se elimina para que parezca
+       una continuación del botón.
+    */
+    border: 2px solid #ffffff;
+    border-top: none;
+
+    /*
+       Mantiene la sombra lateral/inferior del estilo Persona.
+    */
+    box-shadow: 6px 6px 0 #ffffff;
+
+    /*
+       Comienza completamente comprimido desde arriba.
+    */
+    transform: skew(-10deg) scaleY(0);
+    transform-origin: top center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    /*
+       Primero termina la animación del botón y después
+       comienza a desplegarse el menú.
+    */
+    transition:
+        transform 0.28s cubic-bezier(0.25, 1, 0.5, 1) 0.12s,
+        opacity 0.18s ease 0.12s,
+        visibility 0.18s 0.12s;
+
+    z-index: 10;
+
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* ==================== MENÚ ABIERTO ==================== */
+
+.nav-item-dropdown.activo .dropdown-menu {
+
+    transform: skew(-10deg) scaleY(1);
+
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* ==================== OPCIONES ==================== */
+
+.dropdown-item {
+    display: block;
+
+    width: 100%;
+
+    padding: 12px 15px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 900;
+    font-style: italic;
+
+    text-align: center;
+
+    background-color: #080808;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+/* Hover de cada opción */
+
+.dropdown-item:hover {
+    background-color: #e50914;
+    color: #ffffff;
+}
+
+
+/* ==================== SEPARADOR ==================== */
+
+.dropdown-item:not(:last-child) {
+    position: relative;
+}
+
+
+/*
+   Línea blanca más corta que el ancho del menú.
+   No toca los bordes.
+*/
+.dropdown-item:not(:last-child)::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 10%;
+
+    width: 80%;
+    height: 1px;
+
+    background-color: #ffffff;
+
+    z-index: 2;
+}
 
 /*HAMBURGUESA*/
 
@@ -949,3 +1107,289 @@ footer p {
 
 /* ==================== CORRECCIÓN MENÚ HAMBURGUESA ==================== */
 
+/* =========================================================
+   DROPDOWN RESPONSIVE - TELEFONOS
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    /* El contenedor ocupa todo el ancho del menú móvil */
+    .nav-item-dropdown {
+        display: block;
+        width: 70%;
+    }
+
+
+    /* El botón ANIME ocupa el ancho disponible */
+    .nav-item-dropdown .dropdown-toggle {
+        width: 100%;
+    }
+
+
+    /* ==================== SUBMENÚ ==================== */
+
+    .nav-item-dropdown .dropdown-menu {
+        position: relative;
+
+        top: -6px;
+        left: -6px;
+
+        width: 100%;
+
+        /*
+           Lo dejamos pegado al botón.
+        */
+        margin-top: -2px;
+
+        /*
+           En móvil ya no necesitamos una posición
+           absoluta porque el menú está dentro del
+           panel de navegación.
+        */
+        transform: skew(-10deg) scaleY(0);
+        transform-origin: top center;
+
+        /*
+           Mantiene la misma animación que en PC.
+        */
+        opacity: 0;
+        visibility: hidden;
+
+        max-height: 0;
+
+        transition:
+            transform 0.28s cubic-bezier(0.25, 1, 0.5, 1),
+            opacity 0.18s ease,
+            max-height 0.28s ease,
+            visibility 0.18s ease;
+
+        overflow: hidden;
+
+        box-shadow: 5px 5px 0 #ffffff;
+    }
+
+
+    /* ==================== ABIERTO ==================== */
+
+    .nav-item-dropdown.activo .dropdown-menu {
+
+        transform: skew(-10deg) scaleY(1);
+
+        opacity: 1;
+        visibility: visible;
+
+        max-height: 150px;
+    }
+
+
+    /* ==================== OPCIONES ==================== */
+
+    .nav-item-dropdown .dropdown-item {
+
+        width: 100%;
+
+        padding: 14px 15px;
+
+        font-size: 16px;
+
+        text-align: center;
+    }
+
+
+    /* ==================== ANIMACIÓN DEL BOTÓN ==================== */
+
+    .nav-item-dropdown.activo .dropdown-toggle {
+
+        background-color: #e50914;
+
+        border-color: #ffffff;
+
+        transform: skew(-10deg) translate(-3px, -3px);
+
+        /*
+           Evitamos la sombra inferior para que el
+           submenú parezca conectado al botón.
+        */
+        box-shadow: 5px 0 0 #ffffff;
+    }
+
+}
+
+/* ==================== FOOTER PERSONA 5 STYLE ==================== */
+
+.p5-footer {
+  /* Fondo oscuro distintivo */
+  background: #080808; 
+  border-top: 4px solid #e50914;
+  color: #fff;
+  padding: 60px 20px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.p5-footer::before {
+  /* Detalle decorativo de franja roja inclinada en el fondo */
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: #fff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Sección Superior --- */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-brand h2 {
+  font-size: 42px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #fff;
+  transform: skew(-8deg);
+  margin: 0;
+  text-shadow: 3px 3px 0 #e50914;
+}
+
+.footer-brand p {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #888;
+  margin-top: 4px;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.socials-title {
+  font-size: 14px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: #e50914;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #181818;
+  color: #fff;
+  border: 2px solid #fff;
+  font-size: 13px;
+  font-weight: 900;
+  font-style: italic;
+  text-decoration: none;
+  transform: skew(-8deg);
+  box-shadow: 4px 4px 0 #e50914;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-btn span {
+  margin-left: 4px;
+  display: inline-block;
+}
+
+.social-btn:hover {
+  background: #e50914;
+  color: #fff;
+  transform: skew(-8deg) translate(-2px, -2px);
+  box-shadow: 6px 6px 0 #fff;
+}
+
+/* --- Separador --- */
+.footer-divider {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, #e50914 0%, #333 50%, transparent 100%);
+  margin-bottom: 30px;
+}
+
+/* --- Sección Inferior --- */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.footer-legal {
+  max-width: 700px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: #777;
+}
+
+.footer-legal p {
+  margin-bottom: 8px;
+}
+
+.fan-disclaimer {
+  color: #aaa;
+  font-style: italic;
+}
+
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.footer-policy-links a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-policy-links a:hover {
+  color: #e50914;
+}
+
+.footer-policy-links .sep {
+  color: #e50914;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-policy-links {
+    flex-wrap: wrap;
+  }
+}
