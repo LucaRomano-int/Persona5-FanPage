@@ -36,13 +36,21 @@
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">INICIO</a>
         <a href="personajes.html" class="nav-link active">PERSONAJES</a>
-        <a
-          href="https://store.steampowered.com/app/1687950/Persona_5_Royal/"
-          target="_blank"
-          class="nav-link"
-          >COMPRAR</a
-        >
+
+        <div class="nav-item-dropdown">
+          <a href="anime.html" class="nav-link dropdown-toggle">ANIME</a>
+          <div class="dropdown-menu">
+            <a href="anime.html" class="dropdown-item">ANIME</a>
+            <a href="pelicula.html" class="dropdown-item">ESPECIAL</a>            
+          </div>
+        </div>
+        
+        <a href="https://store.steampowered.com/app/1687950/Persona_5_Royal/" target="_blank" class="nav-link">COMPRAR
+        </a>
+        <a href= "contacto.html" class="nav-link">CONTACTO</a>
       </nav>
+
+
     </header>
 
     <main class="characters-page">
@@ -798,12 +806,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
       </section>
     </main>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer>
-      <p>Proyecto realizado con HTML, CSS y JavaScript.</p>
-    </footer>
-
-    <script src="js/main.js"></script>
+    <!-- ===================== MODEL ==================== -->
 
       <div id="modal-personaje" class="modal">
         <div class="modal-contenido">
@@ -834,6 +837,65 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
           </div>
         </div>
       </div>
+
+    <!-- ==================== FOOTER ==================== -->
+      <footer class="p5-footer">
+        <div class="footer-container">
+          
+          <!-- Sección Superior / Redes y Enlaces -->
+          <div class="footer-top">
+            <div class="footer-brand">
+              <h2>ATLUS</h2>
+              <p>SEGA® / ATLUS®</p>
+            </div>
+
+            <div class="footer-socials">
+              <span class="socials-title">SÍGUENOS //</span>
+              <div class="social-links">
+                <a href="https://twitter.com/Atlus_West" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  X (TWITTER) <span>↗</span>
+                </a>
+                <a href="https://www.instagram.com/atlus_west" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  INSTAGRAM <span>↗</span>
+                </a>
+                <a href="https://www.youtube.com/@atlus" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  YOUTUBE <span>↗</span>
+                </a>
+                <a href="https://www.facebook.com/AtlusWest" target="_blank" rel="noopener noreferrer" class="social-btn">
+                  FACEBOOK <span>↗</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-divider"></div>
+
+          <!-- Sección Inferior / Legal y Derechos -->
+          <div class="footer-bottom">
+            <div class="footer-legal">
+              <p>
+                © ATLUS. © SEGA. All rights reserved. ATLUS, the ATLUS logo and PERSONA 5 ROYAL are registered trademarks or trademarks of ATLUS Co., Ltd. or its affiliates. SEGA is registered in the U.S. Patent and Trademark Office.
+              </p>
+              <p class="fan-disclaimer">
+                Página no oficial desarrollada por fanáticos con fines meramente educativos y sin fines de lucro.
+              </p>
+            </div>
+
+            <div class="footer-policy-links">
+              <a href="#">POLÍTICA DE PRIVACIDAD</a>
+              <span class="sep">/</span>
+              <a href="#">TÉRMINOS DE SERVICIO</a>
+              <span class="sep">/</span>
+              <a href="#">SOPORTE</a>
+            </div>
+          </div>
+
+        </div>
+      </footer>
+
+    <script src="js/main.js"></script>
+
+
 
   </body>
 </html>
