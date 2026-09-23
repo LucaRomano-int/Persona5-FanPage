@@ -201,6 +201,7 @@
 
 .episodes {
   background: #0b0b0b;
+  scroll-margin-top: 40px; /* Para que el ancla no quede tapada por la navbar */
 }
 
 .episode-list {

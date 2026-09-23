@@ -1,7 +1,5 @@
 
-
 /*===================================*/
-
 .characters-page {
   position: relative;
   padding-top: 100px;
@@ -31,6 +29,7 @@
   position: relative;
   padding: 30px 8%;
   z-index: 2;
+  scroll-margin-top: 100px; /* Para que el ancla no quede tapada por la navbar */
 }
 
 .carousel-section::after {
@@ -99,6 +98,18 @@
   gap: 30px;
   padding-right: 25px;
   transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* PERSONAJES SECUNDARIOS SALTO DE LINEA*/
+
+.section-title h2 .br-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-title h2 .br-mobile {
+    display: inline;
+  }
 }
 
 /*=========|| Tarjeta individual de personaje ||=========*/

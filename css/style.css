@@ -681,6 +681,7 @@ body {
   padding: 100px 8%;
   background-color: #111111;
   overflow: hidden;
+  scroll-margin-top: 95px; /* Para que el ancla no quede tapada por la navbar */
 }
 
 .section-title {
