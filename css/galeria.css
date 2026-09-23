@@ -30,10 +30,10 @@
 /* Formas rojas decorativas de fondo */
 .gallery-bg-shape-1 {
   position: absolute;
-  right: -10%;
-  top: 15%;
-  width: 55%;
-  height: 40%;
+  right: -30%;
+  top: 10%;
+  width: 65%;
+  height: 65%;
   background-color: #e50914;
   transform: rotate(-7deg);
   opacity: 0.85;
@@ -44,9 +44,9 @@
 .gallery-bg-shape-2 {
   position: absolute;
   left: -12%;
-  bottom: 10%;
+  bottom: -30%;
   width: 60%;
-  height: 35%;
+  height: 75%;
   background-color: #e50914;
   transform: rotate(6deg);
   opacity: 0.85;
