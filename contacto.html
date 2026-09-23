@@ -25,7 +25,17 @@
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">INICIO</a>
-        <a href="personajes.html" class="nav-link">PERSONAJES</a>
+
+        <div class="nav-item-dropdown">
+          <a href="personajes.html" class="nav-link dropdown-toggle">PERSONAJES</a>
+          <div class="dropdown-menu">
+            <a href="personajes.html#protagonistas" class="dropdown-item">PROTAGONISTAS</a>
+            <a href="personajes.html#secundarios" class="dropdown-item">SECUNDARIOS</a>     
+            <a href="personajes.html#villanos" class="dropdown-item">VILLANOS</a>         
+          </div>
+        </div>
+
+        <a href="galeria.html" class="nav-link">GALERIA</a>
 
         <div class="nav-item-dropdown">
           <a href="anime.html" class="nav-link dropdown-toggle">ANIME</a>
@@ -73,7 +83,7 @@
           </div>
         </div>
 
-        <form class="contact-form" action="mailto:TU_CORREO@EJEMPLO.COM" method="post" enctype="text/plain">
+        <form class="contact-form" action="mailto:luxtron5@gmail.com" method="post" enctype="text/plain">
           <div class="form-group">
             <label for="nombre">NOMBRE</label>
             <input type="text" id="nombre" name="Nombre" placeholder="Tu nombre" required>
@@ -97,11 +107,6 @@
           <button type="submit" class="contact-button">
             ENVIAR MENSAJE <span>↗</span>
           </button>
-
-          <p class="form-note">
-            * Reemplazá <strong>TU_CORREO@EJEMPLO.COM</strong> en el HTML
-            por el correo que quieras recibir.
-          </p>
         </form>
       </div>
     </section>

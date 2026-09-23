@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería - Persona 5 Royal</title>
+  <link rel="icon" href="images/ui/Phantom-Thieves-of-Hearts-Logo.png" type="image/png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/stylePersonajes.css" />
+  <link rel="stylesheet" href="css/galeria.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <img src="images/ui/Phantom-Thieves-of-Hearts-Logo.png" alt="Persona 5 Royal" />
+    </a>
+
+    <button class="hamburger-btn" id="hamburger-btn" aria-label="Abrir Menú">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">INICIO</a>
+
+      <div class="nav-item-dropdown">
+        <a href="personajes.html" class="nav-link dropdown-toggle">PERSONAJES</a>
+        <div class="dropdown-menu">
+          <a href="personajes.html#protagonistas" class="dropdown-item">PROTAGONISTAS</a>
+          <a href="personajes.html#secundarios" class="dropdown-item">SECUNDARIOS</a>
+          <a href="personajes.html#villanos" class="dropdown-item">VILLANOS</a>
+        </div>
+      </div>
+
+      <a href="galeria.html" class="nav-link active">GALERIA</a>
+
+      <div class="nav-item-dropdown">
+        <a href="anime.html" class="nav-link dropdown-toggle">ANIME</a>
+        <div class="dropdown-menu">
+          <a href="anime.html" class="dropdown-item">ANIME</a>
+          <a href="pelicula.html" class="dropdown-item">ESPECIAL</a>
+        </div>
+      </div>
+
+      <a href="https://store.steampowered.com/app/1687950/Persona_5_Royal/" target="_blank" class="nav-link">COMPRAR</a>
+      <a href="contacto.html" class="nav-link">CONTACTO</a>
+    </nav>
+  </header>
+
+  <!-- ==================== SECCIÓN GALERÍA ==================== -->
+  <main class="gallery-page">
+
+    <div class="gallery-bg-shape-1"></div>
+    <div class="gallery-bg-shape-2"></div>
+
+    <section class="gallery-section">
+      <div class="section-title">
+        <span>01</span>
+        <h2>GALERÍA DE CAPTURAS</h2>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img110.png" alt="All-Out Attack Joker" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>UN PEQUEÑO DESCANSO</h3>
+            <p>REN, RYUJI Y ANN DESPUES DE UNA MISION</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img111.png" alt="Morgana Gameplay" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>RISAS ENTRE AMIGOS</h3>
+            <p>ES DIFICIL COMER ALGO CALIENTE CON ANTEOJOS</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img112.png" alt="Ryuji Gameplay" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>DIA DE PLAYA!</h3>
+            <p>PURA TRANQUILIDAD</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img113.png" alt="Ann Gameplay" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>UNA DIFICIL DESPEDIDA</h3>
+            <p>NO TODO ES FELICIDAD</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img114.png" alt="Yusuke Gameplay" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>FESTIVAL DE PRIMAVERA</h3>
+            <p>SIEMRPE VIENE BIEN VER LOS FUEGOS ARTIFICIALES</p>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <div class="gallery-img-wrapper">
+            <img src="images/conceptArt/img115.png" alt="Makoto Gameplay" />
+          </div>
+          <div class="gallery-card-info">
+            <h3>UN BUEN CAFÉ</h3>
+            <p>ES BUENO ESUCHAR A MORGANA (AVECES)</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== MODAL VISOR DE GALERÍA (SIMPLIFICADO) ==================== -->
+  <div class="modal" id="gallery-modal">
+    <!-- Flecha Izquierda Fuera -->
+    <button class="modal-nav-btn prev" id="modal-prev">&#10094;</button>
+
+    <div class="modal-contenido">
+      <div class="modal-cerrar" id="modal-cerrar">&times;</div>
+      <div class="modal-imagen-container">
+        <img src="" alt="Imagen Ampliada" id="modal-img-display" />
+      </div>
+    </div>
+
+    <!-- Flecha Derecha Fuera -->
+    <button class="modal-nav-btn next" id="modal-next">&#10095;</button>
+  </div>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="p5-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h2>ATLUS</h2>
+          <p>SEGA® / ATLUS®</p>
+        </div>
+        <div class="footer-socials">
+          <span class="socials-title">SÍGUENOS //</span>
+          <div class="social-links">
+            <a href="https://twitter.com/Atlus_West" target="_blank" rel="noopener noreferrer" class="social-btn">X (TWITTER) <span>↗</span></a>
+            <a href="https://www.instagram.com/atlus_west" target="_blank" rel="noopener noreferrer" class="social-btn">INSTAGRAM <span>↗</span></a>
+            <a href="https://www.youtube.com/@atlus" target="_blank" rel="noopener noreferrer" class="social-btn">YOUTUBE <span>↗</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <div class="footer-legal">
+          <p>© ATLUS. © SEGA. All rights reserved.</p>
+          <p class="fan-disclaimer">Página no oficial desarrollada por fanáticos con fines educativos.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/galeria.js"></script>
+</body>
+</html>

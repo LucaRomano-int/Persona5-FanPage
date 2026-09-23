@@ -35,7 +35,17 @@
 
       <nav class="nav-menu">
         <a href="index.html" class="nav-link">INICIO</a>
-        <a href="personajes.html" class="nav-link active">PERSONAJES</a>
+
+        <div class="nav-item-dropdown">
+          <a href="personajes.html" class="nav-link active dropdown-toggle">PERSONAJES</a>
+          <div class="dropdown-menu">
+            <a href="personajes.html#protagonistas" class="dropdown-item">PROTAGONISTAS</a>
+            <a href="personajes.html#secundarios" class="dropdown-item">SECUNDARIOS</a>     
+            <a href="personajes.html#villanos" class="dropdown-item">VILLANOS</a>         
+          </div>
+        </div>
+
+        <a href="galeria.html" class="nav-link">GALERIA</a>
 
         <div class="nav-item-dropdown">
           <a href="anime.html" class="nav-link dropdown-toggle">ANIME</a>
@@ -44,7 +54,7 @@
             <a href="pelicula.html" class="dropdown-item">ESPECIAL</a>            
           </div>
         </div>
-        
+
         <a href="https://store.steampowered.com/app/1687950/Persona_5_Royal/" target="_blank" class="nav-link">COMPRAR
         </a>
         <a href= "contacto.html" class="nav-link">CONTACTO</a>
@@ -56,7 +66,7 @@
     <main class="characters-page">
       <!-- ==================== PROTAGONISTAS ==================== -->
 
-      <section class="carousel-section">
+      <section id="protagonistas" class="carousel-section">
         <div class="section-title">
           <span>01</span>
           <h2>PROTAGONISTAS</h2>
@@ -65,14 +75,15 @@
         <div class="carousel-wrapper">
           <button
             class="carousel-btn prev"
-            onclick="moveCarousel('protagonistas', -1)">&#10094;
+            onclick="moveCarousel('track-protagonistas', -1)">&#10094;
           </button>
 
           <div class="carousel-track-container">
-            <div class="carousel-track" id="protagonistas">
+            <div class="carousel-track" id="track-protagonistas">
               <!-- Tarjeta de Personaje inicio -->
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/joker_mask.png,images/characters/modal_Img/joker_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/joker_persona.png"
                 data-modal-arcana="The Fool"
                 data-modal-persona="Arsène / Satanael"
                 data-modal-desc="Ren Amamiya es un estudiante de secundaria injustamente condenado por agresión tras intervenir para defender a una mujer del acoso de un político influyente. Expulsado de su escuela anterior y puesto en libertad condicional, es enviado a Tokio a vivir con Sojiro Sakura en la cafetería Leblanc y asistir a la Academia Shujin.
@@ -100,6 +111,7 @@ Bajo su apariencia tranquila, reservada y refinada de estudiante de gafas, Ren o
               <!-- Tarjeta de Personaje final -->
               <div class="character-card" 
                 data-modal-img="images/characters/modal_Img/morgana_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/morgana_persona.png"
                 data-modal-arcana="The Magician"
                 data-modal-persona="Zorro / Mercurius"
                 data-modal-desc="Morgana es una criatura misteriosa con apariencia de gato negro que viste un pañuelo amarillo y que los Ladrones rescatan dentro del primer Palacio (el Metaverso). Aunque en el mundo real se ve obligado a actuar y vivir como un gato común dentro de la mochila de Ren, posee inteligencia humana, habla fluidamente (aunque solo aquellos que han estado en el Metaverso pueden entenderlo) y afirma haber sido humano en el pasado.
@@ -126,6 +138,7 @@ Actúa como el mentor táctico y guía inicial del grupo sobre las reglas del Me
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/ryuji_mask.png,images/characters/modal_Img/ryuji_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/ryuji_persona.png"
                 data-modal-arcana="The Chariot"
                 data-modal-persona="Captain Kidd / Seiten Taisei"
                 data-modal-desc='Ryuji es el típico "chico malo" incomprendido y estigmatizado de la Academia Shujin. Antiguo talento del equipo de atletismo, vio sus sueños truncados cuando el abusivo profesor de educación física, Suguru Kamoshida, provocó la disolución del equipo y le fracturó la pierna en un incidente provocado.
@@ -154,6 +167,7 @@ Impulsivo, ruidoso y de sangre caliente, Ryuji es el primer aliado humano de Ren
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/ann_mask.png,images/characters/modal_Img/ann_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/ann_persona.png"
                 data-modal-arcana="The Lovers"
                 data-modal-persona="Carmen / Hecate"
                 data-modal-desc="Ann es una estudiante de origen estadounidense y modelo a tiempo parcial. Debido a sus rasgos extranjeros y su impresionante belleza, sufre un profundo aislamiento en Shujin, siendo objeto de chismes crueles y de la acosadora atención de Kamoshida. Su única amiga verdadera es Shiho Suzui.
@@ -181,6 +195,7 @@ Cuando el acoso de Kamoshida lleva a Shiho a un intento de suicidio, Ann despier
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/yosuke_mask.png,images/characters/modal_Img/yosuke_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/yosuke_persona.png"
                 data-modal-arcana="The Emperor"
                 data-modal-persona="Goemon / Kamu Susano-o"
                 data-modal-desc="Yusuke es un estudiante de arte de la Academia Kosei con una personalidad excéntrica, dramática y formal. Quedó huérfano a una edad muy temprana y fue acogido por el famoso pintor Ichiryusai Madarame, a quien Yusuke idolatraba como su salvador y maestro.
@@ -208,6 +223,7 @@ Sin embargo, descubre que Madarame es un fraude que explota a sus alumnos, roba 
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/makoto_mask.png,images/characters/modal_Img/makoto_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/makoto_persona.png"
                 data-modal-arcana="The Priestess"
                 data-modal-persona="Johanna / Anat"
                 data-modal-desc="Makoto es la presidenta del consejo estudiantil de Shujin y la hermana menor de la estricta fiscal Sae Niijima. Inicialmente vista como una estudiante modélica, fría y obediente que cumple todas las expectativas de los adultos, Makoto vive bajo una inmensa presión académica y familiar.
@@ -235,6 +251,7 @@ Tras ser manipulada por el director de la escuela para investigar a los Ladrones
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/futaba_mask.png,images/characters/modal_Img/futaba_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/futaba_persona.png"
                 data-modal-arcana="The Hermit"
                 data-modal-persona="Necronomicon / Prometheus"
                 data-modal-desc='Futaba es la hija adoptiva de Sojiro Sakura. Es un genio de la informática y una hacker legendaria conocida en la red como "Alibaba". Sufre de agorafobia severa y estrés postraumático debido a la manipulación psicológica de adultos corruptos, quienes le hicieron creer que ella fue la responsable de la trágica muerte de su madre, Wakaba Isshiki.
@@ -262,6 +279,7 @@ El Palacio de Futaba es único, ya que ella misma es quien invoca al grupo a su 
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/haru_mask.png,images/characters/modal_Img/haru_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/haru_persona.png"
                 data-modal-arcana="The Empress"
                 data-modal-persona="Milady / Astarte"
                 data-modal-desc="Haru es una estudiante de tercer año e hija de Kunikazu Okumura, el ambicioso presidente de la corporación Okumura Foods. A pesar de su crianza privilegiada, amabilidad y afición por la jardinería, Haru vive aislada y es tratada por su padre como una pieza de intercambio político a través de un matrimonio concertado con un prometido abusivo.
@@ -289,6 +307,7 @@ En el Metaverso, Haru adopta la estética de una mosquetera victoriana equipada 
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/akechi_mask.png,images/characters/modal_Img/akechi_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/akechi_persona.png"
                 data-modal-arcana="Justice"
                 data-modal-persona="Robin Hood / Loki"
                 data-modal-desc='Akechi es un famoso detective de secundaria aclamado por los medios como "el regreso del Príncipe Detective". Inteligente, educado y carismático, actúa públicamente como el principal rival ideológico y perseguidor legal de los Ladrones Fantasma, argumentando que cambiar el corazón de la gente es una violación del libre albedrío.
@@ -316,6 +335,7 @@ En Persona 5 Royal, se profundiza enormemente en su compleja relación con Ren y
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_Img/sumire_mask.png,images/characters/modal_Img/sumire_mementos.png"
+                data-modal-persona-img="images/characters/modal_Img/sumire_persona.png"
                 data-modal-arcana="Faith"
                 data-modal-persona="Cendrillon / Vanadis"
                 data-modal-desc="Introducida en la versión Royal, es una gimnasta rítmica de élite que ingresa a Shujin con una beca de honor. Aunque admira profundamente a Ren y entabla una cálida amistad con él, inicialmente no apoya los métodos de los Ladrones Fantasma, prefiriendo resolver sus problemas mediante el esfuerzo personal.
@@ -346,13 +366,13 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
         <button 
           class="carousel-btn next" 
-          onclick="moveCarousel('protagonistas', 1)">&#10095;
+          onclick="moveCarousel('track-protagonistas', 1)">&#10095;
         </button>
         </div>
 
       <div class="carousel-progress-bar">
         <div 
-          class="progress-fill" id="progress-protagonistas">
+          class="progress-fill" id="progress-track-protagonistas">
         </div>
       </div>
 
@@ -360,24 +380,24 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
       <!-- ==================== SECUNDARIOS ==================== -->
 
-      <section class="carousel-section">
+      <section id="secundarios" class="carousel-section">
         <div class="section-title">
           <span>02</span>
-          <h2>PERSONAJES <br>SECUNDARIOS</h2>
+          <h2>PERSONAJES <br class="br-mobile">SECUNDARIOS</h2>
         </div>
 
         <div class="carousel-wrapper">
           <button
             class="carousel-btn prev"
-            onclick="moveCarousel('secundarios', -1)">&#10094;
+            onclick="moveCarousel('track-secundarios', -1)">&#10094;
           </button>
 
           <div class="carousel-track-container">
-            <div class="carousel-track" id="secundarios">
+            <div class="carousel-track" id="track-secundarios">
               <!-- Tarjeta de Personaje Secundario inicio-->
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/igor.png"
-                data-modal-arcana="Fool"
+                data-modal-arcana="The Fool"
                 data-modal-desc="Igor es el enigmático maestro de la Velvet Room, un espacio ubicado entre el sueño y la realidad que adopta la forma de una prisión de máxima seguridad para el Protagonista. Con una nariz extremadamente larga y una voz profunda, Igor actúa como el guía principal del jugador en su viaje de rehabilitación, ofreciéndole la capacidad de fusionar múltiples Personas y expandir el poder del 'Comodín'.
                 A lo largo de la historia, Igor supervisa el crecimiento del Protagonista y evalúa si la humanidad podrá liberarse de sus propios deseos distorsionados. Sin embargo, su verdadera identidad y motivaciones en Persona 5 Royal esconden un giro de trama fundamental que afecta directamente el destino de la Velvet Room y del mundo real.">
                 <div class="card-images">
@@ -397,7 +417,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
               <!-- Tarjeta de Personaje Secundario final-->
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/sakura.png"
-                data-modal-arcana="Hierophant"
+                data-modal-arcana="The Hierophant"
                 data-modal-desc="Sojiro Sakura es el dueño del Café Leblanc en Yongen-Jaya y el tutor legal asignado al Protagonista durante su año de libertad condicional. Inicialmente se muestra distante, estricto y escéptico respecto a la inocencia del joven, advirtiéndole constantemente que mantenga un perfil bajo y no busque problemas.A medida que pasa el tiempo, Sojiro demuestra ser una figura paterna cálida, experta en la preparación de café y curry. Su verdadera historia está profundamente ligada a Futaba Sakura, la hija de una antigua conocida científica a quien adoptó para protegerla del trauma y la culpa, arriesgando su propia tranquilidad con tal de brindarle un hogar seguro.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -417,7 +437,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
               </div>
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Sae-Niijima.png"
-                data-modal-arcana="Judgement"
+                data-modal-arcana="The Judgement"
                 data-modal-desc="Sae Niijima es una ambiciosa fiscal del Distrito de Tokio y la hermana mayor y tutora legal de Makoto Niijima. Marcada por la muerte de su padre policía, Sae ha desarrollado un enfoque pragmático y obsesivo hacia el sistema judicial, creyendo que el éxito y la victoria en los tribunales son lo único que importa en la sociedad.Sae encabeza la investigación oficial del gobierno para capturar a los Phantom Thieves, viendo este caso como la oportunidad definitiva para ascender en su carrera profesional. Su Confidante se desarrolla de forma automática a medida que interroga al Protagonista en el presente, donde sus prejuicios e ideales sobre la justicia son puestos a prueba al conocer la verdad detrás de las acciones del grupo.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -438,7 +458,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Chihaya-mifune.png"
-                data-modal-arcana="Fortune"
+                data-modal-arcana="The Fortune"
                 data-modal-desc="Chihaya es una adivina oriunda de un pueblo rural que trabaja en un puesto ambulante en el distrito de Shinjuku. Posee una habilidad genuina para leer el futuro a través de las cartas del tarot y la lecturas de piedras, aunque al inicio del juego se encuentra atrapada bajo la influencia de una organización sospechosa que vende artefactos supuestamente mágicos por sumas astronómicas de dinero.A pesar de su capacidad real de clarividencia, Chihaya vive atormentada por la creencia de que el destino es completamente inmutable. Al colaborar con el Protagonista, descubre que las acciones individuales y el espíritu humano pueden cambiar el curso del futuro, lo que la motiva a liberarse del grupo manipulador y a utilizar sus talentos de manera honesta para guiar a sus clientes.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -460,7 +480,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Caroline-y-Justine.png"
-                data-modal-arcana="Strength"
+                data-modal-arcana="The Strength"
                 data-modal-desc="Caroline y Justine son las dos guardianes gemelas de la Velvet Room, sirvientas de Igor. Caroline porta un parche en el ojo derecho y muestra una personalidad bastante agresiva y dominante hacia el Protagonista, a quien llama constantemente 'recluso'. Por su parte, Justine lleva el parche en el ojo izquierdo y mantiene un comportamiento reservado, calmado y analítico, actuando como el contrapeso equilibrado a las arremetidas de su hermana.Ambas se encargan de administrar las fusiones de Personas y las ejecuciones dentro de la prisión mental. A medida que avanza su Confidante, la relación con ellas se desarrolla cumpliendo solicitudes específicas de fusión de Personas con ciertas habilidades. Con el tiempo, comienzan a cuestionar la verdadera naturaleza de su trabajo en la Velvet Room, descubriendo secretos sobre su propio origen y su propósito original.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -482,7 +502,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Munehisa-Iwai.png"
-                data-modal-arcana="Hanged Man"
+                data-modal-arcana="The Hanged Man"
                 data-modal-desc="Munehisa Iwai es el propietario de Untouchable, una tienda de artículos militares en Shibuya donde el Protagonista adquiere réplicas de armas y equipamiento. Presenta una fachada dura, intimidante y un tatuaje distintivo, escondiendo un pasado vinculado directamente con la Yakuza que intenta dejar atrás para proteger a su entorno.A pesar de su aspecto frío, Iwai es un padre adoptivo sumamente protector que busca darle una vida honesta a su hijo Kaoru, ocultándole sus antecedentes criminales. Cuando amenazas de su pasado criminal regresan para extorsionarlo, confía en el Protagonista para realizar un trabajo no oficial a cambio de suministros de armas personalizadas y modificaciones para el equipo del grupo.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -504,12 +524,12 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Tea-Takemi.png"
-                data-modal-arcana="Death"
+                data-modal-arcana="The Death"
                 data-modal-desc="Tae Takemi es una médica que dirige una clínica privada e independiente en Yongen-Jaya. Posee una estética gótica y una actitud sarcástica que lleva a los vecinos a apodarla 'la médica de la muerte', además de vender medicamentos poco convencionales de fabricación propia.Su aislamiento de la comunidad médica oficial se debe a que fue víctima de un chivo expiatorio por parte de un superior corrupto en un hospital universitario, culpándola injustamente por el fracaso de un tratamiento experimental. El Protagonista se ofrece como voluntario para probar sus nuevos fármacos, ayudándola a perfeccionar sus medicinas y a limpiar su reputación profesional.">
                 <div class="card-images">
                   <div class="char-single-vertical">
                     <img
-                      src="images/characters/npc/Tae-Takemi.png"
+                      src="images/characters/npc/tea-Takemi.png"
                       alt="Tae Takemi"
                     />
                   </div>
@@ -526,7 +546,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images\characters\modal_img_secundarios\Sadayo-Kawakami.png"
-                data-modal-arcana="Temperance"
+                data-modal-arcana="The Temperance"
                 data-modal-desc="Kawakami es la tutora de la clase 2-D en la Academia Shujin y la profesora encargada del Protagonista. A simple vista aparenta ser una docente exhausta, apática e indiferente ante el rendimiento académico de sus alumnos, abrumada por el constante estrés laboral dentro del colegio.Sin embargo, Kawakami oculta una doble vida trabajando como empleada doméstica nocturna a domicilio para pagar una extorsión financiera relacionada con un trágico accidente de su pasado pedagógico. Al descubrir su secreto, el Protagonista contrata sus servicios de limpieza para ayudarla a liberarse de la chantajista, permitiéndole recuperar su vocación por la enseñanza y otorgándole tiempo libre al jugador durante las horas de clase.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -548,7 +568,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images\characters\modal_img_secundarios\Ichiko-Ohya.png"
-                data-modal-arcana="Devil"
+                data-modal-arcana="The Devil"
                 data-modal-desc="Ichiko Ohya es una periodista de prensa rosa y de chismes que pasa la mayor parte de su tiempo libre bebiendo en el bar Lala Escargot en Shinjuku. Presentada inicialmente como una reportera oportunista y desmotivada en busca de primicias sobre los Phantom Thieves, revela gradualmente una faceta mucho más profunda, ética y orientada a la investigación periodística seria. Su comportamiento desinteresado y su alcoholismo son el resultado del trauma producido por la misteriosa desaparición de su antigua compañera de trabajo mientras investigaban un caso político corrupto. Al colaborar con el Protagonista a cambio de información exclusiva sobre los Phantom Thieves, Ohya retoma el rastro de la conspiración para descubrir la verdad sobre su colega y limpiar su reputación.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -570,7 +590,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images\characters\modal_img_secundarios\Oda-Shinya.png"
-                data-modal-arcana="Tower"
+                data-modal-arcana="The Tower"
                 data-modal-desc="Oda Shinya, conocido en el entorno virtual como 'King', es un niño de escuela primaria extremadamente talentoso en los juegos de disparos en arcade en Akihabara. A pesar de su corta edad, posee una actitud agresiva, competitiva y un lenguaje brusco hacia otros jugadores, fruto de los problemas personales que enfrenta fuera del centro de juegos. Su comportamiento arrogante es una respuesta defensiva ante el conflicto constante con su madre, una mujer autoritaria que intenta moldearlo a su antojo. Al entablar amistad con el Protagonista, Shinya aprende el verdadero significado de la empatía y el trabajo en equipo, utilizando sus habilidades con la pistola para enseñarle al jugador técnicas avanzadas de disparo aplicables en los combates del Metaverso.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -591,7 +611,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Hifumi-Togo.png"
-                data-modal-arcana="Star"
+                data-modal-arcana="The Star"
                 data-modal-desc="Hifumi es una brillante jugadora de Shogi que estudia en la Academia Kosei, conocida tanto por sus habilidades tácticas en el tablero como por su apariencia atractiva, lo que atrae la atención de los medios de comunicación. Durante las partidas, experimenta una transformación dramática en su personalidad, volviéndose sumamente dramática y teatral al anunciar cada uno de sus movimientos estratégicos. Detrás de su éxito público, Hifumi enfrenta una gran presión ejercida por su madre, quien busca comercializar su imagen y arreglar partidas para mantener su fama. Al relacionarse con el Protagonista, Hifumi encuentra el coraje necesario para enfrentar el control materno y dedicarse al Shogi por verdadero amor al juego, enseñándole además valiosas estrategias de combate aplicables al Metaverso.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -613,7 +633,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
               <div class="character-card"
                 data-modal-img="images/characters/modal_img_secundarios/Yuuki-Mishima.png"
-                data-modal-arcana="Moon"
+                data-modal-arcana="The Moon"
                 data-modal-desc="Mishima es un estudiante de la Academia Shujin y compañero de clase del Protagonista. Inicialmente víctima de los abusos físicos y psicológicos del profesor Kamoshida, Mishima busca un propósito tras la caída de su agresor y se convierte en el creador y administrador del 'Phansite', la página web donde los ciudadanos solicitan la ayuda de los Phantom Thieves. Su devoción por el grupo bordea la obsesión, utilizando la plataforma para acumular atención social y validación personal a través de la fama indirecta de los ladrones de corazones. A través de su relación con el Protagonista, Mishima debe aprender a no dejarse consumir por el deseo de poder y a ayudar a los demás de manera altruista sin buscar reconocimiento externo.">
                 <div class="card-images">
                   <div class="char-single-vertical">
@@ -637,20 +657,20 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
           <button
             class="carousel-btn next"
-            onclick="moveCarousel('secundarios', 1)">&#10095;
+            onclick="moveCarousel('track-secundarios', 1)">&#10095;
           </button>
         </div>
 
       <div class="carousel-progress-bar">
         <div 
-          class="progress-fill" id="progress-secundarios">
+          class="progress-fill" id="progress-track-secundarios">
         </div>
       </div>
 
       </section>
 
       <!-- ==================== VILLANOS ==================== -->
-      <section class="carousel-section">
+      <section id="villanos" class="carousel-section">
         <div class="section-title">
           <span>03</span>
           <h2>VILLANOS</h2>
@@ -659,13 +679,14 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
         <div class="carousel-wrapper">
           <button
             class="carousel-btn prev"
-            onclick="moveCarousel('villanos', -1)">&#10094;
+            onclick="moveCarousel('track-villanos', -1)">&#10094;
           </button>
 
           <div class="carousel-track-container">
-            <div class="carousel-track" id="villanos">
+            <div class="carousel-track" id="track-villanos">
               <!-- Tarjeta de Villano 1 -->
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Castillo de Kamoshida">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -685,7 +706,8 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
                 </div>
               </div>
 
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Museo de Madarame">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -705,7 +727,8 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
                 </div>
               </div>
 
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Banco de Kaneshiro">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -725,7 +748,8 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
                 </div>
               </div>
 
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Puert Espacial de Okumura">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -745,7 +769,8 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
                 </div>
               </div>
 
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Crucero de Shido">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -766,7 +791,8 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
                 </div>
               </div>
 
-              <div class="character-card">
+              <div class="character-card"
+                data-modal-palace="Laboratorio de Maruki">
                 <div class="card-images">
                   <div class="char-single-rectangular">
                     <img
@@ -791,7 +817,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
           <button
             class="carousel-btn next"
-            onclick="moveCarousel('villanos', 1)"
+            onclick="moveCarousel('track-villanos', 1)"
           >
             &#10095;
           </button>
@@ -799,7 +825,7 @@ Su historia esconde uno de los giros más emocionales del juego respecto a su ve
 
       <div class="carousel-progress-bar">
         <div 
-          class="progress-fill" id="progress-villanos">
+          class="progress-fill" id="progress-track-villanos">
         </div>
       </div>
 
